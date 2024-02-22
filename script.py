@@ -72,4 +72,3 @@ def create_commendation(schoolkid, item_name):
     except MultipleObjectsReturned:
         last_subject = Lesson.objects.filter(subject__title=item_name, group_letter=schoolkid.group_letter, year_of_study=schoolkid.year_of_study).order_by('date').first()
         praise = Commendation.objects.create(text=random.choice(how_to_praise), created=last_subject.date, schoolkid=schoolkid, subject=last_subject.subject, teacher=last_subject.teacher )
-        praise.save()
