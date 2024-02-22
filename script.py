@@ -1,11 +1,9 @@
-from datacenter.models import Schoolkid
-from datacenter.models import Mark
-from datacenter.models import Chastisement
-from datacenter.models import Lesson
-from datacenter.models import Commendation
 import random
 
+from datacenter.models import Schoolkid, Mark, Chastisement, Lesson, Commendation
 from django.core.exceptions import ObjectDoesNotExist, MultipleObjectsReturned
+
+
 
 
 def name_student(name):
@@ -18,7 +16,6 @@ def name_student(name):
             print("Ничего не указали, введите ФИО.")
         else:
             print(f'Найдено несколько школьников с именем "{name}", добавьте фамилию или отчество.')
-
 
 
 def fix_marks(schoolkid):
